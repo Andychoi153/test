@@ -1,0 +1,21 @@
+{
+  "taskDefinition": {
+    "family": "hello-world",
+    "containerDefinitions": [
+      {
+        "name": "face-recognition-worker",
+        "image": "071637104407.dkr.ecr.us-east-2.amazonaws.com/face-recognition-worker:latest",
+        "cpu": 100,
+        "portMappings": [
+          {
+            "protocol": "tcp",
+            "containerPort": 80,
+            "hostPort": 80
+          }
+        ],
+        "memory": 128,
+        "essential": true
+      }
+    ]
+  }
+}
